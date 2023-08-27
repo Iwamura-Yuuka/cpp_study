@@ -1,7 +1,7 @@
-# amsl_cpp_tutorials
+# cpp_study
 
 ## 概要
-AMSL新入生向けのC++のチュートリアル
+amsl_cpp_tutorials(AMSL新入生向けのC++のチュートリアル)に自分のメモを追記したもの
 
 ## 環境
 Ubuntu 20.04
