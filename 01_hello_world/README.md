@@ -32,11 +32,36 @@ g++ main.o -o main
 
 参考: http://omilab.naist.jp/~mukaigawa/misc/Makefile.html
 
-`Makefile`があるディレクトリで単に`make`を実行すると、`Makefile`内の一番上に定義されたターゲットが実行される。`make ターゲット`として、ターゲットを指定して実行することもできる
+`Makefile`があるディレクトリで単に`make`を実行すると、`Makefile`内の一番上に定義されたターゲット(all)が実行される。`make ターゲット`として、ターゲットを指定して実行することもできる
 
 例えばこのディレクトリで`make clean`を実行すると、これまでに生成した`main`や`main.o`が削除される。`make`を実行するとこれらが再度生成される
 
 `make`の実際の処理は、そのターゲットの依存対象に更新があったときのみ実行される。例えばこのディレクトリで`make clean`してから`make main`を2回実行すると、1回目はビルドが実行されて`main`及び`main.o`が生成されるが、2回目は`make: 'main' is up to date.`と表示され、処理がスキップされる
+
+### memo
+`make` or `make all` → `make clean`と`make main`が実行される
+```
+rm -rf main.o main
+g++ -c main.cpp
+g++ -o main.o
+```
+
+`make main`
+```
+g++ -c main.cpp
+g++ -o main.o
+```
+
+`make main.o`
+```
+g++ -c main.cpp
+g++ -o main.o
+```
+
+`make clean`
+```
+rm -rf main.o main
+```
 
 ## C++ソースコードのビルド(cmake)
 クロスプラットフォーム・非コンパイラ依存で様々な環境向けの`Makefile`の生成などができるツール
