@@ -40,7 +40,7 @@ g++ main.o -o main
 
 `make`の実際の処理は、そのターゲットの依存対象に更新があったときのみ実行される。例えばこのディレクトリで`make clean`してから`make main`を2回実行すると、1回目はビルドが実行されて`main`及び`main.o`が生成されるが、2回目は`make: 'main' is up to date.`と表示され、処理がスキップされる
 
-### <font color="mediumblue">memo</font>
+### <font color="MediumBlue">memo</font>
 
 `make` or `make all` → `make clean`と`make main`が実行される
 ```
@@ -93,7 +93,7 @@ cmake ..
 make
 ```
 
-### <font color="mediumblue">memo</font>
+### <font color="MediumBlue">memo</font>
 
 `cmake -S . -B build` を実行すると，buildディレクトリが作成され，ディレクトリ内に以下のファイル，ディレクトリが生成される．
 ```
