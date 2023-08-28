@@ -1,5 +1,7 @@
 # 01_hello_world
 
+<br>
+
 ## C++ソースコードのビルド(g++)
 ```
 g++ main.cpp -o main
@@ -20,6 +22,8 @@ g++ -c main.cpp
 g++ main.o -o main
 ```
 
+<br>
+
 ## C++ソースコードのビルド(make)
 上記のようなビルドの手順を`Makefile`に記載しておくことで、`make`コマンドを用いてビルドできるようになる
 
@@ -39,6 +43,7 @@ g++ main.o -o main
 `make`の実際の処理は、そのターゲットの依存対象に更新があったときのみ実行される。例えばこのディレクトリで`make clean`してから`make main`を2回実行すると、1回目はビルドが実行されて`main`及び`main.o`が生成されるが、2回目は`make: 'main' is up to date.`と表示され、処理がスキップされる
 
 ### memo
+
 `make` or `make all` → `make clean`と`make main`が実行される
 ```
 rm -rf main.o main
@@ -62,6 +67,8 @@ g++ -o main.o
 ```
 rm -rf main.o main
 ```
+
+<br>
 
 ## C++ソースコードのビルド(cmake)
 クロスプラットフォーム・非コンパイラ依存で様々な環境向けの`Makefile`の生成などができるツール
@@ -87,3 +94,15 @@ cd build
 cmake ..
 make
 ```
+
+### memo
+
+`cmake -S . -B build` を実行すると，buildディレクトリが作成され，ディレクトリ内に以下のファイル，ディレクトリが生成される．
+```
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+```
+
+`cmake --build build` を実行すると，buildディレクトリ内にmainが生成される
