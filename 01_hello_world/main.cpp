@@ -18,7 +18,7 @@ int main(int argc, char **argv)
   return 0;
 }
 
-// 以下のようにネームスペースを使って，stdの記述を省略することも可能
+// 以下のように名前空間を使って，stdの記述を省略することも可能
 /*
 #include <iostream>
 using namespace std;
