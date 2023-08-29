@@ -19,7 +19,7 @@ main.o: main.cpp
 	$(CC) -c main.cpp $(INCLUDE)
 
 lib.o: lib.cpp
-	$(CC) -c lib.cpp $(INCLUDE)
+	$(CC) -c lib.cpp
 
 clean:
 	rm -rf $(OBJ) $(TARGET)
