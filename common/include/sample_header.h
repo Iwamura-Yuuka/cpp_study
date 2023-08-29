@@ -14,6 +14,8 @@ namespace common
   void print_hello_world()
   {
     std::cout << "Hello, world! from " << __FILE__ << std::endl;
+    // __FILE__を使うと，ソースコードが書かれているファイル名をプログラム内に埋め込むことができる
+    // 今回は __FILE__ = sample_header.h
   }
 }
 
