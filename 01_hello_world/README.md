@@ -66,7 +66,6 @@ g++ -o main.o
 `make main.o`
 ```
 g++ -c main.cpp
-g++ -o main.o
 ```
 
 `make clean`
