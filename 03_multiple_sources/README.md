@@ -15,6 +15,8 @@ g++ main.cpp -I../common lib.cpp -o main
 fatal error: include/sample_header.h: No such file or directory
 ```
 
+逆に， `lib.cpp` では `sample_header.h` をインクルードしていないので， `-I` オプションはなくてもよい
+
 <br>
 
 ## ソースファイルが複数ある場合のビルド(make)
