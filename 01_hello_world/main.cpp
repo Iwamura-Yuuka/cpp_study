@@ -17,3 +17,15 @@ int main(int argc, char **argv)
   std::cout << "Hello, world!" << std::endl;
   return 0;
 }
+
+// 以下のようにネームスペースを使って，stdの記述を省略することも可能
+/*
+#include <iostream>
+using namespace std;
+
+int main(int argc, char **argv)
+{
+  cout << "Hello, world!" << endl;
+  return 0;
+}
+*/
